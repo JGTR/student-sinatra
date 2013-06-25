@@ -1,6 +1,6 @@
 set :application, "sinatra-webapp"
 set :repository,  "https://github.com/JGTR/student-sinatra"
-set :user, 'jgtrevino'
+set :user, 'jgtr'
 set :deploy_to, "/home/#{user}/#{application}"
 set :use_sudo, false
 set :scm, :git
