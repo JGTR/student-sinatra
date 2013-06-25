@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 
 set :application, "sinatra-webapp"
-set :repository,  "git://github.com/gglin/student-sinatra.git"
+set :repository,  "git@github.com:JGTR/student-sinatra.git"
 set :user, 'jgtrevino'
 set :deploy_to, "/home/#{ user }/#{ application }"
 set :use_sudo, false
