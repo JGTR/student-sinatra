@@ -7,21 +7,8 @@ require 'sqlite3'
 module StudentSite
   class App < Sinatra::Base
     get '/' do
-      "hello world!"
-    end
-
-    get '/hello-world' do
-      @random_numbers = *(1..20)
-      erb :hello
-    end
-
-    get '/artists' do
-
-      x= "Joaquin Phoenix"
-      y = "River Phoenix"
-
-      @artists = [x, y]
-      erb :artists
+      @students = Student.all
+      erb :'students/index', :layout => true
     end
 
     get '/students' do

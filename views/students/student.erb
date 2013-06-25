@@ -160,7 +160,8 @@
                 <div class="services-title"><h3>Education</h3></div>
                 <div class="clear"></div>
                 <ul>
-                  <li>University of Oregon, Journalism, Digital Arts</li>
+                  <li>I've graduated from the university of life!</li>
+                  <li>I've studied many a thing in my life.</li>
                 </ul>
               </div>
             </div>
@@ -170,10 +171,9 @@
                 <div class="services-title"><h3>Work</h3></div>
                 <div class="clear"></div>
                 <p>
-                  <h4>Freelance CD</h4>
-                  CD in advertising for various clients
+                  <h4><%= @student.work.split.slice(0,6) %></h4>
                   <br>
-                  <a href="http://mentalsafari.com">View my portfolio</a>
+                  <%= @student.work.split.slice(5,20) %>
                 </p>
               </div>
             </div>

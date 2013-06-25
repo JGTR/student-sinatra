@@ -9,7 +9,11 @@ class Student
     :name => "TEXT",
     :tagline => "TEXT",
     :bio => "TEXT",
-    :treehouse_profile => "TEXT"
+    :work => "TEXT",
+    :github => "TEXT",
+    :treehouse_profile => "TEXT",
+    :codeschool => "TEXT",
+    :coderwall => "TEXT"
   }
 
   def self.attributes
