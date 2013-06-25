@@ -2,7 +2,7 @@ set :application, "sinatra-webapp"
 set :repository,  "https://github.com/JGTR/student-sinatra"
 set :user, 'jgtrevino'
 set :deploy_to, "/home/#{user}/#{application}"
-set use_sudo, false
+set :use_sudo, false
 set :scm, :git
 default_run_options[:pty] = true
 
@@ -11,8 +11,8 @@ default_run_options[:pty] = true
 
 role :web, "192.241.134.69"                          # Your HTTP server, Apache/etc
 role :app, "192.241.134.69"                      # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+# role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
+# role :db,  "your slave db-server here"
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
