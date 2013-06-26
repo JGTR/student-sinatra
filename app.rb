@@ -23,6 +23,46 @@ module StudentSite
       erb :'students/student', :layout => false
     end
 
+    get '/newstudentform' do
+      
+      erb :'newstudentform', :layout => false
+
+    end
+
+    post '/filledstudentform' do
+      @name    = params[:name]
+      @tagline = params[:tagline]
+      @bio     = params[:bio]
+
+      student = Student.new
+      student.name    = @name
+      student.bio     = @bio
+      student.tagline = @tagline
+      student.work = ""
+
+      student.save
+       
+      erb :'filledstudentform', :layout => false
+
+    end
+
+    get '/students/:id/edit' do
+      student_id = params[:id]
+      @student = Student.find(student_id)
+      erb :'students/student', :layout => false
+    end
+
+    get '/editstudentform' do
+      
+      erb :'editstudentform', :layout => false
+
+    end
+
+
+#we want a web form for new students
+#creates a new student
+
+
   end
 end
 
