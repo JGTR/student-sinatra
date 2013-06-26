@@ -85,7 +85,7 @@
 
       <div class="link-subs">
         <span>
-          <img src="../img/student-icons/swiss-army-knife.png" style="width: 16px;" /> Kristen Curtis</span>
+          <img src="../img/student-icons/swiss-army-knife.png" style="width: 16px;" /> <%= @student.name %></span>
 
         <ul>
           <li><a href="#scroll-about">About</a></li>
@@ -106,7 +106,7 @@
       <!-- Begin Splash Image -->
       <div class="top-page-title">
         <div>
-          <img src="../img/student_photos/kristenc.jpg" class="student_pic">
+          <img src="" class="student_pic">
         </div>
       </div>
       <! -- End Splash Image -->
@@ -128,6 +128,8 @@
                 <div class="textwidget">
                   <h3><%= @student.tagline %> </h3>
                 </div>
+              </li>
+              <li><a href = "/students/<%=@student.id%>/edit"> Edit student </a>
               </li>
             </ul>
           </div>
